@@ -109,4 +109,50 @@ object placa {
   method cambiarColor(unColor) {
     color = unColor
   }
+} 
+object arito {
+  method color() {
+    return celeste
+  } 
+  method material() {
+    return cobre
+  } 
+  method peso() {
+    return 180
+  }
+} 
+object banquito { 
+  var color = naranja
+  method peso() {
+    return 1700
+  } 
+  method material() {
+    return madera
+  } 
+  method color() {
+    return color
+  } 
+  method cambiarColor(unColor) {
+    color = unColor
+  }
+} 
+object naranja {
+  method esFuerte() {
+    return true
+  }
+} 
+object cajita {  
+  var objeto = banquito
+  method material() {
+    return cobre
+  }
+  method color() {
+    return rojo
+  }  
+  method cambiarObjeto(unObjeto) {
+    objeto = unObjeto
+  } 
+  method peso() {
+    return 400 + objeto.peso()
+  }
 }

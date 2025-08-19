@@ -20,5 +20,11 @@ object bolichito {
   method esEquilibrado() {
     return objetoEnElMostrador.peso()>objetoEnLaVidriera.peso()
   } 
+  method tieneObjetoExhibidoDeColor_YSepuedeMejorar(unColor) {
+    return (objetoEnElMostrador.color() == unColor or objetoEnLaVidriera.color() == unColor) and (not self.esEquilibrado() or self.esMonocromatico())
+  }
+  method puedeOfrecerAlgunObjetoExhibidoAlaPersona(unaPersona) {
+    return(unaPersona.leGusta(objetoEnElMostrador) or unaPersona.leGusta(objetoEnLaVidriera))
+  }
   
 }
